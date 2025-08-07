@@ -1,0 +1,199 @@
+.forth-box{
+
+    width: 100%;
+    height: 600px;
+    position: relative;
+}
+
+.forth-box img{
+
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+
+}
+.contact-1{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    font-size: 60px;
+    letter-spacing: 4px;
+    font-weight: 900;
+    color: white;
+    left:35%;
+    top:50px;
+    right:35%;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.9);
+    transition-duration: 1s;
+}
+.contact-2{
+     
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left:45%;
+    top:220px;
+    min-width: 150px;
+    right:45%;
+    background-color: rgb(231, 231, 3);
+    font-size: 30px;
+    font-weight: 900;
+    padding-bottom: 5px;
+    border-radius: 70px;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    
+}
+.contact-2:active .hidden-contact-box{
+    pointer-events: all;
+    visibility: visible;
+}
+.hidden-contact-box{
+   
+    position: absolute; 
+    left:40%;
+    top:260px;
+    right:40%;
+    background-color: rgba(54, 53, 53, 0.432);
+    height: 120px;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    border-radius: 30px;
+    transition-duration: 0.7s;
+    visibility: hidden;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    transition-duration: 1s;
+}
+
+.contact-2:hover ~ .hidden-contact-box {
+  visibility: visible;
+  pointer-events: all;
+  opacity: 1;
+}
+.contact-wrapper:hover .hidden-contact-box{
+    visibility: visible;
+    pointer-events: all;
+    opacity: 1;
+   
+}
+
+
+.instagram{
+ 
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-bottom: 2px solid rgb(158, 61, 5);
+}
+.Instagram_icon{
+    position: absolute;
+    width: 30px;
+    object-fit: fill;
+    left: 60px;
+   
+   
+}
+.instagram-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0px;
+    top:0px;
+    left: 50px;
+    width: 150px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+
+}
+.gmail{
+    border-bottom: 2px solid rgb(158, 61, 5);
+
+}
+.facebook{
+  
+    transform: translateY(40px);
+}
+
+
+
+
+@media (max-width:600px){
+
+    .contact-1{
+        font-size: 50px;
+    }
+}
+
+
+@media(max-width:499px){
+
+    .contact-1{
+        font-size:25px
+    }
+    .contact-2{
+        left:30%;
+    }
+    .hidden-contact-box{
+        left: 17%;
+        top:300px;
+        right: 17%;
+
+    }
+}
+
+@media(max-width:390px){
+
+
+
+    .hidden-contact-box{
+        left: 17%;
+        top:300px;
+        right: 7%;
+
+    }
+}
+
+@media(max-width:330px){
+
+
+
+    .hidden-contact-box{
+        left:7%;
+        top:300px;
+        right: 7%;
+
+    }
+    .contact-1{
+        font-size:20px
+    }
+
+}
+
+@media(max-width:300px){
+
+
+
+    .contact-2{
+        left:23%;
+    }
+}
+@media(max-width:280px){
+
+
+
+    .hidden-contact-box{
+        left: 0px;
+        top:300px;
+        right: 0px;
+
+    }
+}
+

@@ -1,0 +1,91 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.first-box{
+    position: relative;;
+    width: 100%;
+    height:1000px;
+
+    padding-top: 125px;
+  
+ 
+}
+.first-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+}
+
+.freespace-1{
+    left: 0px;
+    position: absolute;
+    top:300px;
+    bottom: 100px;
+    width: 1000px;
+    transition-duration: 1s;
+    background-color: white;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.726);
+    min-width: 200px;
+}
+
+@media (max-width: 1060px) and (min-width:500px){
+    .freespace-1{
+        width: 750px;
+    }
+}
+@media (max-width: 800px) and (min-width:500px){
+    .freespace-1{
+        width: 650px;
+    }
+}
+@media (max-width: 720px) and (min-width:500px){
+    .freespace-1{
+        width: 550px;
+    }
+}
+@media (max-width: 600px) and (min-width:500px){
+    .freespace-1{
+        width: 400px;
+    }
+}
+
+
+@media (max-width: 499px) {
+  .first-box {
+    height: auto;
+    margin-top: 220px;
+    padding-top: 0px;
+  }
+
+  .first-box img {
+    height: auto; /* Adjust as needed */
+    object-fit: cover;
+    display: block;
+  }
+
+  .freespace-1 {
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    min-width: unset;
+    max-width: 95%;
+    height: auto;
+    padding: 10px;
+    background-color: white;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
